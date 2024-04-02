@@ -1,0 +1,56 @@
+hash_map = {}
+
+#hash_map[1] = "Einkaufen"
+#hash_map[2] = "Hausaufgaben"
+#hash_map[3] = "Coden"
+
+
+
+
+def add_to_dic(key_2,value):
+          # Hinzufügen von einem Key-value
+          if key_2 not in hash_map:
+               hash_map[key_2] = value
+               print("Key-value hinzugefügt.") 
+          else:
+               # Wenn er bereits existiert wird folgendes Ausgegeben:
+               print("Existiert bereits.")
+
+def remove_hash(key_3):
+     if key_3 in hash_map:
+            del hash_map[key_3]
+            print("Erfolgreich gelöscht.")
+          
+   
+def main():
+     while True:
+          print("1. Hinzufügen")
+          print("2. Löschen")
+          
+          choice = int(input("Wähle (1/2): "))
+          
+          if choice == 1:
+               # input 1
+               key = input("Gebe ein Key ein: ") # Bsp: 1
+               # input 2
+               value = input("Gebe ein value ein: ") # Bsp: Coden
+          
+               add_to_dic(key,value)
+               print()
+          print(hash_map)
+          print()
+          # input 3
+          
+          if choice == 2:
+               
+               delete = input("delete: ")
+               remove_hash(delete)
+               print()
+               print(hash_map)
+
+          
+          
+if __name__ == "__main__":
+     main()
+               
+     
